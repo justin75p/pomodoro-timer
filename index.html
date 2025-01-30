@@ -8,23 +8,32 @@
     <title>Pomodoro Timer</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="title">Pomodoro Timer</h1>
-            <hr>
-        </header>
+    <main>
 
-        <main>
-            <div class="container">
-                <p id="timer">25:00</p>
+        <div class="container">
+
+            <div class="spotifyContainer">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4eWBwGl0c5wtp6k5Krp6My?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="interface">
+                <h1 class="title">Pomodoro Timer</h1>
+                <hr>
+                
                 <button id="shortBreak">Short Break</button>
                 <button id="longBreak">Long Break</button>
+                <p id="timer">25:00</p>
                 <button id="start">Start</button>
                 <button id="pause">Pause</button>
                 <button id="reset">Reset</button>
             </div>
-        </main>
 
-    </div>
+            <div class="todoList">
+                <h2>To Do List</h2>
+                <label class="todo"></label>
+                <input type="text" placeholder="What do you need to do?" id="todoTextBox">
+            </div>
+        </div>
+    </main>
 </body>
 </html>

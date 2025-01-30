@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-color: black;
+    border-width: 1px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+
+}
+
+.container .interface p {
+    font-size: 36px;
+}
+
+.title {
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+}
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: lightgray;
+    padding: 24px;
+}
