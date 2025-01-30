@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border-color: black;
-    border-width: 1px;
 }
 
 body {
@@ -14,29 +12,59 @@ body {
 
 }
 
-.container .interface p {
-    font-size: 36px;
+.spotifyContainer, .interface, .todoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.title {
-    margin: auto;
+.spotifyContainer {
+    flex: 2;
+}
+
+.spotifyContainer iframe {
+    width: 100%; 
+}
+
+.container .interface p {
+    font-size: 6em;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
     gap: 1em;
+    width: 60vw;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 12px;
 }
 
 .interface {
-    display: flex;
-    flex-direction: column;
+    flex: 1.5;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-
     background-color: lightgray;
-    padding: 24px;
+    padding: 12px;
+}
+
+.todoList {
+    flex: 2;
+    background-color: lightblue;
+    padding: 12px;
+    align-items: center;
+}
+
+#todoTextBox {
+    width: 100%;
 }
