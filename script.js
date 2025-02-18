@@ -7,14 +7,17 @@ let timer = document.getElementById("timer");
 let interval;
 
 function startTimer() {
-    interval = setInterval(() => {
-        timeLeft--;
-        updateTimer();
-        if (timeLeft == 0) {
-            timeLeft = 1500;
-            clearInterval(interval);
-        }
-    }, 1000)    
+    if (interval == null) {
+        interval = setInterval(() => {
+            timeLeft--;
+            updateTimer();
+            if (timeLeft == 0) {
+                timeLeft = 1500;
+                clearInterval(interval);
+                interval == null;
+            }
+        }, 1000) 
+    }
 }
 
 function pauseTimer() {
@@ -28,7 +31,7 @@ function resetTimer() {
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
-    timer.innerHTML = minutes + ":" + seconds;
+    timer.innerHTML = minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
 }
 
 startButton.addEventListener("click", startTimer);
