@@ -21,11 +21,15 @@ function startTimer() {
 }
 
 function pauseTimer() {
-
+    clearInterval(interval);
+    interval = null;
 }
 
 function resetTimer() {
-
+    timeLeft = 1500;
+    updateTimer();
+    clearInterval(interval);
+    interval == null;
 }
 
 function updateTimer() {
